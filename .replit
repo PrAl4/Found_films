@@ -27,5 +27,5 @@ pattern = "**/*.rb"
 start = "solargraph stdio"
 
 [auth]
-pageEnabled = true
+pageEnabled = false
 buttonEnabled = false
