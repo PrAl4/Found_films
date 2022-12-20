@@ -1,4 +1,2 @@
-class ApplicationController < ActionController::Basedef 
-  index
-  end
+class ApplicationController < ActionController
 end
