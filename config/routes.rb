@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  root 'start_page#index' 
-
+  root 'static_pages#home'
+  get 'help'    => 'static_pages#help'
+  get 'signup'  => 'users#new'
+  resources :users
   get 'list_favourites' => 'favourites#list_favourites'
   post '/questions', to: 'questions#create'
+  
 
-  get  'static_pages/contact'
-   get 'signup'  => 'users#new'
-  resources :users
+  
 end

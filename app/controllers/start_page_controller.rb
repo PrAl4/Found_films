@@ -6,6 +6,6 @@ class StartPageController < ApplicationController
   def questionnaire 
   
   end
-  def contact
-  end
+
+  
 end
