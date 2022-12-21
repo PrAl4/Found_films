@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'questions', to: 'questions#index'
   get 'signup'  => 'users#new'
   resources :users
-  get 'list_favourites' => 'static_pages#list_favourites'
+  get 'favourites', to: 'favourites#index'
 
   
 end

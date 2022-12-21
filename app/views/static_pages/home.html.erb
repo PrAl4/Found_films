@@ -1,6 +1,30 @@
 <% provide(:title, "Home") %>
   <head>
     <style>
+
+       body {
+            background-color: #e4e7f9;
+            font-family: Verdana;
+            text-align: center;
+        }
+      form {
+            background-color: #fff;
+            max-width: 3000px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+      
+      .main_text{
+      color: #ccccff; 
+       font-family: ‘Raleway’,sans-serif;
+       font-size: 40px; 
+       font-weight: 800; 
+       line-height: 72px;
+       margin: 0 0 24px; 
+       text-align: center; 
+       text-transform: uppercase;}
+      
       .dashboard {
             text-align: right;
             margin-bottom: 25px;
@@ -11,8 +35,8 @@
   appearance: none;
   border: 0;
   border-radius: 5px;
-  background: #e4e7f9;
-  color: #fff;
+  background: #fff;
+  color: #e4e7f9;
   padding: 8px 16px;
   font-size: 16px;
 }
@@ -20,14 +44,14 @@
   </head>
   <body>
 <div class="center jumbotron">
-  <h1>Welcome to the Films Found</h1>
+  <h1 class = "main_text">Welcome to the Films Found</h1>
 
    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
     <div class = "dashboard">
     <button class = "c-button"><%= link_to "Home",    root_path %></button> 
      <button class = "c-button"> <%= link_to "Questionnaire",   questions_path %></button>
-     <button class = "c-button"> <%= link_to "Favourites",    list_favourites_path %></button>
+     <button class = "c-button"> <%= link_to "Favourites",    favourites_path %></button>
      <button class = "c-button"> <%= link_to "Help",   help_path %></button>
      <button class = "c-button"> <%= link_to "Log in", '#' %></button>
     </div>

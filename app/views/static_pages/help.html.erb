@@ -1,5 +1,56 @@
 <% provide(:title, "Help") %>
-<h1>Help</h1>
+  <head>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+ 
+    <style>
+
+       body {
+            background-color: #e4e7f9;
+            font-family: Verdana;
+            text-align: center;
+        }
+      form {
+            background-color: #fff;
+            max-width: 3000px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+      
+      .main_text{
+      color: #ccccff; 
+       font-family: ‘Raleway’,sans-serif;
+       font-size: 40px; 
+       font-weight: 800; 
+       line-height: 72px;
+       margin: 0 0 24px; 
+       text-align: center; 
+       text-transform: uppercase;}
+
+       .dashboard {
+            text-align: right;
+            margin-bottom: 25px;
+            font-size:20px;
+            padding: 25px;
+        }
+      .c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #310062;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+      
+    </style>
+  </head>
+  <body>
+    <form>
+<h1 class = "main_text">Help</h1>
 <p>
   Get help on the Ruby on Rails Tutorial at the
   <a href="http://www.railstutorial.org/#help">Rails Tutorial help section</a>.
@@ -7,3 +58,13 @@
   <a href="http://www.railstutorial.org/book"><em>Ruby on Rails Tutorial</em>
   book</a>.
 </p>
+    </form>
+  </body>
+  
+  </div>
+    <div class = "dashboard">
+    <button class = "c-button"><%= link_to "Home",    root_path %></button> 
+     <button class = "c-button"> <%= link_to "Questionnaire",   questions_path %></button>
+     <button class = "c-button"> <%= link_to "Favourites",    favourites_path %></button>
+     <button class = "c-button"> <%= link_to "Log in", '#' %></button>
+    </div>
