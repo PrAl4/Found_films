@@ -9,7 +9,13 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <%= yield %>
+ <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/header' %>
+    <div class="container">
+    </div>
   </body>
 </html>

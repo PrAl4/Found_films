@@ -5,6 +5,13 @@ ruby "3.0.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder'
+gem 'sdoc', '~> 0.4.1', group: :doc
 
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
  
@@ -73,5 +80,12 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'minitest-reporters'
+  gem 'mini_backtrace'
+  gem 'guard-minitest'
 end
 
+group :production do
+  gem 'pg'      
+  gem 'rails_12factor'
+end
