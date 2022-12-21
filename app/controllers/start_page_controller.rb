@@ -1,5 +1,11 @@
 class StartPageController < ApplicationController
-   def index
+  def index
      
-   end
+  end
+
+  def questionnaire 
+  
+  end
+
+  
 end
