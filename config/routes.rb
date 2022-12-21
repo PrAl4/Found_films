@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'articles#index'
+  root 'start_page#index' 
 
-  get '/articles', to: 'articles#index'
+  get 'list_favourites' => 'favourites#list_favourites'
   post '/questions', to: 'questions#create'
+
+  resources :start_page
 end
