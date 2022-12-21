@@ -1,6 +1,35 @@
 <% provide(:title, "Home") %>
+  <head>
+    <style>
+      .dashboard {
+            text-align: right;
+            margin-bottom: 25px;
+            font-size:20px;
+            padding: 25px;
+        }
+      .c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #e4e7f9;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+    </style>
+  </head>
+  <body>
 <div class="center jumbotron">
   <h1>Welcome to the Films Found</h1>
 
    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
+    <div class = "dashboard">
+    <button class = "c-button"><%= link_to "Home",    root_path %></button> 
+     <button class = "c-button"> <%= link_to "Questionnaire",   questions_path %></button>
+     <button class = "c-button"> <%= link_to "Favourites",    list_favourites_path %></button>
+     <button class = "c-button"> <%= link_to "Help",   help_path %></button>
+     <button class = "c-button"> <%= link_to "Log in", '#' %></button>
+    </div>
+    
+</body>
