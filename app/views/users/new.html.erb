@@ -1,79 +1,24 @@
 <% provide(:title, 'Sign up') %>
- <head>
- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0">
- 
-    <style>
-
-       body {
-            background-color: #e4e7f9;
-            font-family: Verdana;
-            text-align: center;
-        }
-      form {
-            background-color: #fff;
-            max-width: 3000px;
-            margin: 50px auto;
-            padding: 30px 20px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-        }
-      
-      .main_text{
-      color: #ccccff; 
-       font-family: ‘Raleway’,sans-serif;
-       font-size: 40px; 
-       font-weight: 800; 
-       line-height: 72px;
-       margin: 0 0 24px; 
-       text-align: center; 
-       text-transform: uppercase;}
-
-       .dashboard {
-            text-align: right;
-            margin-bottom: 25px;
-            font-size:20px;
-            padding: 25px;
-        }
-      .c-button {
-  appearance: none;
-  border: 0;
-  border-radius: 5px;
-  background: #fff;
-  color: #310062;
-  padding: 8px 16px;
-  font-size: 16px;
-}
-      
-    </style>
-  </head>
-  <h1>Регистрация</h1>
+<h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :name,'Введите имя:' %>
+      <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email,'Введите электронную почту:' %>
+      <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password,'Введите  пароль:'%>
+      <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation,'Повторите пароль:'%>
+      <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Создать Аккаунт", class: "btn btn-primary" %>
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
-    </div>
-       <div class = "dashboard">
-    <button class = "c-button"><%= link_to "Главная",    root_path %></button> 
-     <button class = "c-button"> <%= link_to "Помощь",   help_path %></button>
-    </div>
-</div>
 </div>

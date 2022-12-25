@@ -44,16 +44,16 @@
   </head>
   <body>
 <div class="center jumbotron">
-  <h1 class = "main_text"> Добро пожаловать в Films Found</h1>
+  <h1 class = "main_text">Welcome to the Films Found</h1>
 
-   <%= link_to "Регистрация", signup_path, class: "btn btn-lg btn-primary" %>
+   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
     <div class = "dashboard">
-     <button class = "c-button"> <%= link_to "Категории",   questions_path %></button>
-     <button class = "c-button"> <%= link_to "Избранное",    favourites_path %></button>
-     <button class = "c-button"> <%= link_to "Войти", login_path %></button>
-     <button class = "c-button"> <%= link_to "Помощь",   help_path %></button>
-
+    <button class = "c-button"><%= link_to "Home",    root_path %></button> 
+     <button class = "c-button"> <%= link_to "Questionnaire",   questions_path %></button>
+     <button class = "c-button"> <%= link_to "Favourites",    favourites_path %></button>
+     <button class = "c-button"> <%= link_to "Help",   help_path %></button>
+     <button class = "c-button"> <%= link_to "Log in", '#' %></button>
     </div>
     
 </body>

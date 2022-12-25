@@ -16,9 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Регистрация прошла успешно!"
-      redirect_to @user
+      # Обработать успешное сохранение.
     else
       render 'new'
     end
