@@ -6,6 +6,11 @@ class StaticPagesController < ApplicationController
   end
 
   def questionnaire 
+    
+  end
+
+  def show_table_film
+    
   end
 
 end

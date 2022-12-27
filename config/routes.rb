@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :users
   get 'favourites', to: 'favourites#index'
-
+  get 'show_table_film', to: 'static_pages#show_table_film'
   
 end

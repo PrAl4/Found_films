@@ -1,7 +1,9 @@
 <% provide(:title, "Home") %>
   <head>
     <style>
-
+      iframe[seamless] {
+    border: none;
+}
        body {
             background-color: #e4e7f9;
             font-family: Verdana;
@@ -50,6 +52,7 @@
   margin: 2px;
   font-size: 16px;
 }
+    
     </style>
   </head>
   <body>
@@ -58,8 +61,11 @@
   <h1 class = "main_text">Добро пожаловать на Films Found</h1>
 
    <%= link_to "Зарегистрируйтесь здесь!", signup_path, class: "btn btn-lg btn-primary" %>
+
   </form>
+
     <div class = "dashboard">
+       <button class = "c-button"> <%= link_to "Перейти к списку фильмов",   show_table_film_path %></button>
      <button class = "c-button"> <%= link_to "Подобрать фильм",   questions_path %></button>
      <button class = "c-button"> <%= link_to "Избранное",    favourites_path %></button>
      <button class = "c-button"> <%= link_to "Войти", login_path %></button>
