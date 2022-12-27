@@ -75,3 +75,5 @@ group :test do
   gem "webdrivers"
 end
 
+
+gem "DreamTeam", "~> 1.1"
