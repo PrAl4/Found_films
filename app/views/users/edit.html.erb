@@ -1,10 +1,60 @@
 <% provide(:title, "Edit user") %>
-<h1>Изменить профиль</h1>
+  <head>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+ 
+    <style>
+
+       body {
+            background-color: #e4e7f9;
+            font-family: Verdana;
+            text-align: center;
+        }
+      form {
+            background-color: #fff;
+            max-width: 3000px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+      
+      .main_text{
+      color: #ccccff; 
+       font-family: ‘Raleway’,sans-serif;
+       font-size: 40px; 
+       font-weight: 800; 
+       line-height: 72px;
+       margin: 0 0 24px; 
+       text-align: center; 
+       text-transform: uppercase;}
+
+       .dashboard {
+            text-align: right;
+            margin-bottom: 25px;
+            font-size:20px;
+            padding: 25px;
+        }
+      .c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #310062;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+      
+    </style>
+  </head>
+  <h1>Изменить профиль</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
+      <%= render 'layouts/header' %>
 
       <%= f.label :name, 'Имя' %>
       <%= f.text_field :name, class: 'form-control' %>

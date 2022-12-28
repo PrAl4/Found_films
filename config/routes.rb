@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  get 'logout'  => 'sessions#destroy'
   resources :users
   get 'favourites', to: 'favourites#index'
+    ## favorites routes
+  resources :favorites, only: [:index, :create, :destroy]
   get 'show_table_film', to: 'static_pages#show_table_film'
   
 end
