@@ -11,7 +11,35 @@
     </title>
  
     <style>
- 
+      
+       .table {
+        font-family:Sans-Serif;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        border: none;
+        background: #fff;
+        margin: 10px;
+    }
+
+    .table thead th {
+        color: #9932CC;
+        border-bottom: 2px solid #9932CC;
+        border-right: none;
+        padding: 7px 17px;
+    }
+
+    .table tbody th {
+        color: #9932CC;
+        border-bottom: 2px solid #e4e7f9;
+        border-right: 2px solid #e4e7f9;
+        padding: 7px 17px;
+    }
+
+    .table tbody tr td:hover td {
+        text-decoration: underline;
+    }
+
         body {
             background-color: #e4e7f9;
             font-family: Verdana;
@@ -72,8 +100,18 @@
   padding: 8px 16px;
   font-size: 16px;
 }
+       .q-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #310062;
+  padding: 8px 16px;
+  font-size: 16px;
+}
 
     </style>
+
 </head>
 
   <body>
@@ -82,171 +120,102 @@
      <h1 class = "main_text">Ответьте на пару вопросов и мы подберем вам фильмец!</h1>
 
 
-      <h2 class= "q_text">Отметьте жанры, на которые хотелось бы глянуть!  </h2>
-      <div>
-      <input type="checkbox" id="Детектив" name="Детектив">
-      <label for="Детектив">Детектив</label>
-    </div>
-
-    <div>
-      <input type="checkbox"  id="Ужасы" name="Ужасы">
-      <label for="Ужасы">Ужасы</label>
+      <h2 class= "q_text">Год выхода фильма иногда важен! </h2>
+       <div>
+      <input type="checkbox" id="1920-1929" name="year">
+      <label for="1920-1929">1920-1929</label>
+    </div> 
+        <div>
+      <input type="checkbox"  id="1930-1939" name="year">
+      <label for="1930-1939">1930-1939</label>
+    </div> 
+       <div>
+      <input type="checkbox"  id="1940-1949" name="year">
+      <label for="1940-1949">1940-1949</label>
+    </div> 
+       <div>
+      <input type="checkbox"  id="1950-1959" name="year">
+      <label for="1950-1959">1950-1959</label>
+    </div> 
+       <div>
+      <input type="checkbox"  id="1960-1969" name="year">
+      <label for="1960-1969">1960-1969</label>
     </div>
        <div>
-      <input type="checkbox" id="Триллер" name="Триллер">
-      <label for="Триллер">Триллер</label>
+      <input type="checkbox"  id="1970-1979" name="year">
+      <label for="1970-1979">1970-1979</label>
     </div>
        <div>
-      <input type="checkbox"  id="Приключения" name="Приключения">
-      <label for="Приключения">Приключения</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Комедия" name="Комедия">
-      <label for="Комедия">Комедия</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Драма" name="Драма">
-      <label for="Драма">Драма</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Фэнтези" name="Фэнтези">
-      <label for="Фэнтези">Фэнтези</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Фантастика" name="Фантастика">
-      <label for="Фантастика">Фантастика</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Экшен" name="Экшен">
-      <label for="Экшен">Экшен</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Детектив" name="Детектив">
-      <label for="Детектив">Детектив</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Исторический" name="Исторический">
-      <label for="Исторический">Исторический</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Документальный" name="Документальный">
-      <label for="Документальный">Документальный</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Боевик" name="Боевик">
-      <label for="Боевик">Боевик</label>
-    </div>
-       <div>
-      <input type="checkbox"  id="Мистика" name="Мистика">
-      <label for="Мистика">Мистика</label>
-    </div>
-
-      <h2 class= "q_text">Год выхода фильма тоже иногда важен! </h2>
-      
-       <div>
-      <input type="checkbox"  id="1980-1989" name="1980-1989">
+      <input type="checkbox"  id="1980-1989" name="year">
       <label for="1980-1989">1980-1989</label>
     </div>
       <div>
-      <input type="checkbox"  id="1990-1999" name="1990-1999">
+      <input type="checkbox"  id="1990-1999" name="year">
       <label for="1990-1999">1990-1999</label>
     </div>
       <div>
-      <input type="checkbox"  id="2000-2009" name="2000-2009">
+      <input type="checkbox"  id="2000-2009" name="year">
       <label for="2000-2009">2000-2009</label>
     </div>
       <div>
-      <input type="checkbox"  id="2010-2019" name="2010-2019">
+      <input type="checkbox"  id="2010-2019" name="year">
       <label for="2010-2019">2010-2019</label>
     </div>
       <div>
-      <input type="checkbox"  id="2020-2022" name="2020-2022">
+      <input type="checkbox"  id="2020-2022" name="year">
       <label for="2020-2022">2020-2022</label>
     </div>
-      
-       <h2 class= "q_text">Страна производства фильма! </h2>
-       <div>
-      <input type="checkbox"  id="США" name="США">
-      <label for="США">США</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Россия" name="Россия">
-      <label for="Россия">Россия</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="СССР" name="СССР">
-      <label for="СССР">СССР</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Великобритания" name="Великобритания">
-      <label for="Великобритания">Великобритания</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Испания" name="Испания">
-      <label for="Испания">Испания</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Италия" name="Италия">
-      <label for="Италия">Италия</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Франция" name="Франция">
-      <label for="Франция">Франция</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Германия" name="Германия">
-      <label for="Германия">Германия</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Бельгия" name="Бельгия">
-      <label for="Бельгия">Бельгия</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Швеция" name="Швеция">
-      <label for="Швеция">Швеция</label>
-    </div>
-      <div>
-      <input type="checkbox"  id="Австрия" name="Австрия">
-      <label for="Австрия">Австрия</label>
-    </div>
-
-     
 
       <h2 class= "q_text">Время оценочек критиков!  </h2>
-
       
       <div>
-      <input type="checkbox"  id="1" name="1">
+      <input type="checkbox"  id="1" name="mark">
       <label for="1">10.0-9.8</label>
     </div>
       <div>
-      <input type="checkbox"  id="2" name="2">
+      <input type="checkbox"  id="2" name="mark">
       <label for="2">9.7-9.5</label>
     </div>
       <div>
-      <input type="checkbox"  id="3" name="3">
+      <input type="checkbox"  id="3" name="mark">
       <label for="3">9.4-9.2</label>
     </div>
       <div>
-      <input type="checkbox"  id="4" name="4">
+      <input type="checkbox"  id="4" name="mark">
       <label for="4">9.1-8.9</label>
     </div>
       <div>
-      <input type="checkbox"  id="5" name="5">
+      <input type="checkbox"  id="5" name="mark">
       <label for="5">8.8-8.6</label>
     </div>
        <div>
-      <input type="checkbox"  id="6" name="6">
+      <input type="checkbox"  id="6" name="mark">
       <label for="6">8.5-8.3</label>
     </div>
        <div>
-      <input type="checkbox"  id="7" name="7">
+      <input type="checkbox"  id="7" name="mark">
       <label for="7">8.2-8.0</label>
     </div>
         
-    <button type="submit" value="submit"> Найти :) </button>
+    <button class = "q-button"> Найти</button>
     </form>
 
-    
-    
+  <table class='table'>
+  <thead>
+  <tr>
+    <th>Rang</th>
+    <th>Film name</th>
+    <th>Full name</th>
+    <th>Year</th>
+    <th>Image</th>
+    <th>The actors</th>
+    <th>Rating</th>
+    <th>Rating Count</th>
+  </tr>
+  </thead>
+</table>
+    <tbody>
+      
+    </tbody>
+
   </body>

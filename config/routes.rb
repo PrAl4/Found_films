@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     ## favorites routes
   resources :favorites, only: [:index, :create, :destroy]
   get 'show_table_film', to: 'static_pages#show_table_film'
+  get 'show', to: 'questions#films'
   
 end
