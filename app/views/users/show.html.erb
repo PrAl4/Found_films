@@ -1,5 +1,63 @@
 <% provide(:title, @user.name) %>
+   <head>
+    <style>
+      iframe[seamless] {
+    border: none;
+}
+       body {
+            background-color: #e4e7f9;
+            font-family: Verdana;
+            text-align: center;
+        }
+      form {
+            background-color: #fff;
+            max-width: 3000px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+      form_information {
+            background-color: #fff;
+            max-width: 3000px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+      
+      
+      .main_text{
+      color: #9932CC; 
+       font-family: ‘Raleway’,sans-serif;
+       font-size: 40px; 
+       font-weight: 800; 
+       line-height: 72px;
+       margin: 0 0 24px; 
+       text-align: center; 
+       text-transform: uppercase;}
+      
+      .dashboard {
+            text-align: right;
+            margin-bottom: 25px;
+            font-size:20px;
+            padding: 25px;
+        }
+      .c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #e4e7f9;
+  padding: 8px 16px;
+  margin: 2px;
+  font-size: 16px;
+}
+    
+    </style>
+  </head>
+  <body>
 <div class="row">
+  <%= render 'layouts/header' %>
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
@@ -8,4 +66,10 @@
       </h1>
     </section>
   </aside>
+     <div class = "dashboard">
+      <button class = "c-button"> <%= link_to "Перейти к списку фильмов",   show_table_film_path %></button>
+     <button class = "c-button"> <%= link_to "Подобрать фильм",   questions_path %></button>
+     <button class = "c-button"> <%= link_to "Избранное",    favourites_path %></button>
+    </div>
 </div>
+<body>
